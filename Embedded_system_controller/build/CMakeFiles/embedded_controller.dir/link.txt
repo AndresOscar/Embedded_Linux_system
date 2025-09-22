@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/embedded_controller.dir/controller/ctl.c.o CMakeFiles/embedded_controller.dir/sensor/sensor.c.o CMakeFiles/embedded_controller.dir/actuator/led_actuator.c.o CMakeFiles/embedded_controller.dir/actuator/buzzer_actuator.c.o -o embedded_controller 

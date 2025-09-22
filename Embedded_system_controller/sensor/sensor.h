@@ -3,10 +3,13 @@
 
 #include <stddef.h>
 
-/* Genera timestamp ISO8601 en UTC con milisegundos */
-void current_iso8601(char *buffer, size_t size);
+// Inicializa el sensor (ej: abre archivo CSV para escritura)
+void sensor_init(void);
 
-/* Lee una "muestra" del sensor simulado (0 = OK, -1 = error) */
-int read_sensor_sample(unsigned int *sample);
+// Lee un valor del sensor simulado, lo guarda en CSV y lo devuelve
+double sensor_read(void);
+
+// Devuelve el último valor leído del sensor
+double sensor_get_last_value(void);
 
 #endif // SENSOR_H

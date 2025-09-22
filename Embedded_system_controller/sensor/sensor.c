@@ -1,25 +1,38 @@
 #include "sensor.h"
-#include <string.h>
-#include <sys/time.h>
-#include <time.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-void current_iso8601(char *buffer, size_t size) {
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    struct tm tm;
-    localtime_r(&tv.tv_sec, &tm);
-    strftime(buffer, size, "%Y-%m-%dT%H:%M:%S%z", &tm);
-    size_t len = strlen(buffer);
-    snprintf(buffer + len, size - len, ".%03ldZ", tv.tv_usec / 1000);
+// Variable global para almacenar el último valor
+static double last_value = 0.0;
+
+// Puntero al archivo CSV
+static FILE *sensor_log = NULL;
+
+void sensor_init(void) {
+    srand((unsigned int)time(NULL)); // semilla para números aleatorios
+    sensor_log = fopen("sensor_feed.csv", "w");
+    if (!sensor_log) {
+        perror("No se pudo abrir sensor_feed.csv");
+        exit(1);
+    }
+    // Escribir encabezado CSV
+    fprintf(sensor_log, "timestamp,value\n");
+    fflush(sensor_log);
 }
 
-int read_sensor_sample(unsigned int *sample) {
-    int fd = open("/dev/urandom", O_RDONLY);
-    if (fd < 0) return -1;
-    ssize_t r = read(fd, sample, sizeof(*sample));
-    close(fd);
-    return (r == sizeof(*sample)) ? 0 : -1;
+double sensor_read(void) {
+    // Generar valor simulado aleatorio
+    last_value = (double)(rand() % 100); // ejemplo: valores de 0 a 99
+
+    // Timestamp simple
+    time_t now = time(NULL);
+    fprintf(sensor_log, "%ld,%.2f\n", now, last_value);
+    fflush(sensor_log);
+
+    return last_value;
+}
+
+double sensor_get_last_value(void) {
+    return last_value;
 }

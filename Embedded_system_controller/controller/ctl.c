@@ -4,7 +4,7 @@
 #include <time.h>
 
 #include "../sensor/sensor.h"
-#include "../actuators/actuator.h"
+#include "../actuator/actuator.h"
 
 // Instancias de actuadores (definidas en sus .c)
 extern actuator_t led_actuator;
