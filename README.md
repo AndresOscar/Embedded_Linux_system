@@ -77,7 +77,7 @@ Al ejecutar, el programa comienza a muestrear el sensor cada 100 ms y muestra la
 
 ---
 
-3. **Guardar el log en un archivo (opcional)**  
+3. **Guardar el log en un archivo**  
    Si deseas guardar toda la salida en un archivo de texto:
    ```bash
    ./ctl64 > salida_log.txt
@@ -115,7 +115,6 @@ Después de compilar, es importante verificar que los binarios generados corresp
    **Salida esperada:**
    ```
   ctl32: ELF 32-bit LSB pie executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, BuildID[sha1]=def5ac10384efa78195f7823124df134sd123131fa4556734, for GNU/Linux 3.2.0, not stripped
-
    ```
    Esto confirma que el ejecutable fue compilado como **ELF de 32 bits**.
 
@@ -148,7 +147,6 @@ Después de compilar, es importante verificar que los binarios generados corresp
    ```
 
 4. **Inspeccionar encabezado ELF de 32 bits con `readelf`**  
-   *(Ejemplo de salida esperada al compilar en 32 bits; este binario no se generó aún por falta de librerías multilib)*  
    ```bash
    readelf -h ctl32
    ```
