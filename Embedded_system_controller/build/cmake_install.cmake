@@ -1,4 +1,4 @@
-# Install script for directory: /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller
+# Install script for directory: /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

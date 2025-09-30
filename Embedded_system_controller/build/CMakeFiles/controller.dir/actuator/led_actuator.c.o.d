@@ -1,5 +1,5 @@
-CMakeFiles/embedded_controller.dir/actuator/led_actuator.c.o: \
- /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/actuator/led_actuator.c \
+CMakeFiles/controller.dir/actuator/led_actuator.c.o: \
+ /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/actuator/led_actuator.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -24,9 +24,12 @@ CMakeFiles/embedded_controller.dir/actuator/led_actuator.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/actuator/actuator.h
+ /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/actuator/actuator.h

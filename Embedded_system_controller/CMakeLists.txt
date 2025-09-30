@@ -1,16 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
-project(EmbeddedSystemController C)
+project(embedded_system_controller C)
 
 set(CMAKE_C_STANDARD 11)
 
-# Incluir directorios
-include_directories(
-    ${PROJECT_SOURCE_DIR}/sensor
-    ${PROJECT_SOURCE_DIR}/actuator
-    ${PROJECT_SOURCE_DIR}/controller
-)
-
-# Archivos fuente correctos
+# Archivos fuente organizados
 set(SOURCES
     controller/ctl.c
     sensor/sensor.c
@@ -18,5 +11,11 @@ set(SOURCES
     actuator/buzzer_actuator.c
 )
 
-# Crear ejecutable
-add_executable(embedded_controller ${SOURCES})
+# Ejecutable principal
+add_executable(controller ${SOURCES})
+
+# Enlazar con la librería matemática (sqrt, log, etc.)
+target_link_libraries(controller m)
+
+# Opciones de compilación recomendadas
+target_compile_options(controller PRIVATE -Wall -Wextra -pedantic -O2)

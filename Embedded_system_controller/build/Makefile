@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller
+CMAKE_SOURCE_DIR = /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build
+CMAKE_BINARY_DIR = /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named embedded_controller
+# Target rules for targets named controller
 
 # Build rule for target.
-embedded_controller: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 embedded_controller
-.PHONY : embedded_controller
+controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 controller
+.PHONY : controller
 
 # fast build rule for target.
-embedded_controller/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/build
-.PHONY : embedded_controller/fast
+controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/build
+.PHONY : controller/fast
 
 actuator/buzzer_actuator.o: actuator/buzzer_actuator.c.o
 .PHONY : actuator/buzzer_actuator.o
 
 # target to build an object file
 actuator/buzzer_actuator.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/actuator/buzzer_actuator.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/actuator/buzzer_actuator.c.o
 .PHONY : actuator/buzzer_actuator.c.o
 
 actuator/buzzer_actuator.i: actuator/buzzer_actuator.c.i
@@ -142,7 +142,7 @@ actuator/buzzer_actuator.i: actuator/buzzer_actuator.c.i
 
 # target to preprocess a source file
 actuator/buzzer_actuator.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/actuator/buzzer_actuator.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/actuator/buzzer_actuator.c.i
 .PHONY : actuator/buzzer_actuator.c.i
 
 actuator/buzzer_actuator.s: actuator/buzzer_actuator.c.s
@@ -150,7 +150,7 @@ actuator/buzzer_actuator.s: actuator/buzzer_actuator.c.s
 
 # target to generate assembly for a file
 actuator/buzzer_actuator.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/actuator/buzzer_actuator.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/actuator/buzzer_actuator.c.s
 .PHONY : actuator/buzzer_actuator.c.s
 
 actuator/led_actuator.o: actuator/led_actuator.c.o
@@ -158,7 +158,7 @@ actuator/led_actuator.o: actuator/led_actuator.c.o
 
 # target to build an object file
 actuator/led_actuator.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/actuator/led_actuator.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/actuator/led_actuator.c.o
 .PHONY : actuator/led_actuator.c.o
 
 actuator/led_actuator.i: actuator/led_actuator.c.i
@@ -166,7 +166,7 @@ actuator/led_actuator.i: actuator/led_actuator.c.i
 
 # target to preprocess a source file
 actuator/led_actuator.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/actuator/led_actuator.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/actuator/led_actuator.c.i
 .PHONY : actuator/led_actuator.c.i
 
 actuator/led_actuator.s: actuator/led_actuator.c.s
@@ -174,7 +174,7 @@ actuator/led_actuator.s: actuator/led_actuator.c.s
 
 # target to generate assembly for a file
 actuator/led_actuator.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/actuator/led_actuator.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/actuator/led_actuator.c.s
 .PHONY : actuator/led_actuator.c.s
 
 controller/ctl.o: controller/ctl.c.o
@@ -182,7 +182,7 @@ controller/ctl.o: controller/ctl.c.o
 
 # target to build an object file
 controller/ctl.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/controller/ctl.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller/ctl.c.o
 .PHONY : controller/ctl.c.o
 
 controller/ctl.i: controller/ctl.c.i
@@ -190,7 +190,7 @@ controller/ctl.i: controller/ctl.c.i
 
 # target to preprocess a source file
 controller/ctl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/controller/ctl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller/ctl.c.i
 .PHONY : controller/ctl.c.i
 
 controller/ctl.s: controller/ctl.c.s
@@ -198,7 +198,7 @@ controller/ctl.s: controller/ctl.c.s
 
 # target to generate assembly for a file
 controller/ctl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/controller/ctl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/controller/ctl.c.s
 .PHONY : controller/ctl.c.s
 
 sensor/sensor.o: sensor/sensor.c.o
@@ -206,7 +206,7 @@ sensor/sensor.o: sensor/sensor.c.o
 
 # target to build an object file
 sensor/sensor.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/sensor/sensor.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/sensor/sensor.c.o
 .PHONY : sensor/sensor.c.o
 
 sensor/sensor.i: sensor/sensor.c.i
@@ -214,7 +214,7 @@ sensor/sensor.i: sensor/sensor.c.i
 
 # target to preprocess a source file
 sensor/sensor.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/sensor/sensor.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/sensor/sensor.c.i
 .PHONY : sensor/sensor.c.i
 
 sensor/sensor.s: sensor/sensor.c.s
@@ -222,7 +222,7 @@ sensor/sensor.s: sensor/sensor.c.s
 
 # target to generate assembly for a file
 sensor/sensor.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/embedded_controller.dir/build.make CMakeFiles/embedded_controller.dir/sensor/sensor.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/sensor/sensor.c.s
 .PHONY : sensor/sensor.c.s
 
 # Help Target
@@ -233,7 +233,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... embedded_controller"
+	@echo "... controller"
 	@echo "... actuator/buzzer_actuator.o"
 	@echo "... actuator/buzzer_actuator.i"
 	@echo "... actuator/buzzer_actuator.s"

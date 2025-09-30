@@ -1,15 +1,24 @@
 #!/bin/bash
 set -e
 
-# Crear carpeta de build si no existe
-mkdir -p build
-cd build
+BUILD_DIR="build"
 
-# Generar configuración con CMake
+# Crear carpeta build si no existe
+if [ ! -d "$BUILD_DIR" ]; then
+  mkdir "$BUILD_DIR"
+fi
+
+cd "$BUILD_DIR"
+
+# Si quieres limpiar compilación previa, descomenta:
+# rm -rf *
+
+# Generar Makefiles
 cmake ..
 
-# Compilar
-make -j$(nproc)
+# Compilar con todos los núcleos disponibles
+make -j"$(nproc)"
 
-echo "✅ Compilación exitosa."
-echo "Ejecutable disponible en: build/embedded_controller"
+# Ejecutar binario
+echo "=== Ejecutando controlador ==="
+./controller

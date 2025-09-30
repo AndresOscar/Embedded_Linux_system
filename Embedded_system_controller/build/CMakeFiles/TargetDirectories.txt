@@ -1,3 +1,3 @@
-/home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles/embedded_controller.dir
-/home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles/edit_cache.dir
-/home/juane/embedded_linux/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles/rebuild_cache.dir
+/home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles/controller.dir
+/home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles/edit_cache.dir
+/home/ogutierreze/Linux_embebed/Embedded_Linux_system/Embedded_system_controller/build/CMakeFiles/rebuild_cache.dir

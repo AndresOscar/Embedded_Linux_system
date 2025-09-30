@@ -1,2 +1,2 @@
-# Empty dependencies file for embedded_controller.
+# Empty dependencies file for controller.
 # This may be replaced when dependencies are built.

@@ -19,12 +19,15 @@ int main(void) {
     // Threshold de ejemplo (más adelante se puede parametrizar)
     double threshold = 25.0;
 
+    // Obtener periodo de muestreo del sensor
+    int sampling_ms = sensor_get_sampling_ms();
+
     // Bucle infinito de prueba
     while (1) {
         // Leer sensor
         double value_sensor = sensor_read();
 
-        // Imprimir valor leído
+        // Imprimir valor leído con timestamp
         struct timespec ts;
         clock_gettime(CLOCK_MONOTONIC, &ts);
         printf("[t=%ld.%03ld] Sensor = %.2f °C\n",
@@ -39,9 +42,11 @@ int main(void) {
             buzzer_actuator.deactivate(buzzer_actuator.params);
         }
 
-        // Esperar 100 ms
-        usleep(100000);
+        // Esperar el tiempo definido por el sensor
+        usleep(sampling_ms * 1000);
     }
 
     return 0;
 }
+
+//crystal disk
