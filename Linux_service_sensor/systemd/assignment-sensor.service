@@ -1,21 +1,14 @@
 [Unit]
-Description=Assignment sensor logger (simulado)
-After=network.target multi-user.target
-Wants=network.target
+Description=Mock sensor logger (assignment)
+After=multi-user.target
 
 [Service]
 Type=simple
-User=assignment-sensor              
-Group=assignment-sensor
-# Ruta absoluta al binario y parámetros
-ExecStart=/usr/local/bin/assignment-sensor --interval 5 --device /dev/urandom
-Restart=on-failure
+ExecStart=/usr/local/bin/assignment-sensor --interval 2 --logfile /var/tmp/sensor.log
+Restart=always
 RestartSec=2
-# Tiempo que systemd espera tras SIGTERM antes de enviar SIGKILL
-TimeoutStopSec=20
-# Señal que systemd usará para terminar (por defecto SIGTERM)
-KillSignal=SIGTERM
-KillMode=control-group
+User=nobody
+WorkingDirectory=/tmp
 
 [Install]
 WantedBy=multi-user.target
