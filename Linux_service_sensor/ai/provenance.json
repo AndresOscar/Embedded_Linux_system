@@ -1,0 +1,43 @@
+{
+  "project": "assignment-sensor",
+  "provenance": [
+    {
+      "tool": "ChatGPT GPT-5",
+      "version": "2025-09-19",
+      "usage": [
+        {
+          "date": "2025-09-20",
+          "purpose": "Explicación inicial de systemd, multi-user.target y requisitos funcionales"
+        },
+        {
+          "date": "2025-09-21",
+          "purpose": "Diseño de estructura del repositorio y módulos (sensor, logger, config, signal_handler, main)"
+        },
+        {
+          "date": "2025-09-22",
+          "purpose": "Implementación inicial de código en C para los módulos"
+        },
+        {
+          "date": "2025-09-25",
+          "purpose": "Creación de Makefile y pruebas de compilación"
+        },
+        {
+          "date": "2025-09-27",
+          "purpose": "Depuración de intervalos de muestreo y ajustes en main.c"
+        },
+        {
+          "date": "2025-09-29",
+          "purpose": "Implementación y corrección de logger con fallback a /var/tmp"
+        },
+        {
+          "date": "2025-10-01",
+          "purpose": "Configuración de systemd service file y pruebas de arranque"
+        },
+        {
+          "date": "2025-10-02",
+          "purpose": "Validación de pruebas (camino feliz, fallback, SIGTERM, error de dispositivo)"
+        }
+      ]
+    }
+  ]
+}
